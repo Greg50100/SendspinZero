@@ -8,9 +8,6 @@ substitutions:
   # Startup sound, options are: Home_Connected or Home_Connected_Male
   startup_sound_file: Home_Connected
 
-  # your home assistant weather entity, in most cases the same.
-  ha_weather_entity: weather.forecast_home
-
   media_sample_rate: 48000
 
 ##################################################################################################################################################
