@@ -1,4 +1,5 @@
 ## SendspinZero for Analog + Digital Coax and Toslink with a BUTTON versions. Edit the settings below.
+
 substitutions:
   name: esphome-web-e82548
   friendly_name: Sendspin Zero Button
