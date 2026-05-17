@@ -52,6 +52,11 @@ That gives a total of **9 variants**:
     <td><strong>Sendspin Zero No Display Digital</strong></td>
     <td><a href="https://realdeco.github.io/SendspinZero/Sendspin_Zero-NO_Display-Digital/"><img src="https://img.shields.io/badge/FLASH-FIRMWARE-ff6b00?style=for-the-badge&labelColor=111827" alt="Open Installer"></a></td>
   </tr>
+</table>
+
+<br>
+
+<table>
   <tr>
     <td><strong>SendspinZero Speaker</strong></td>
     <td><a href="https://realdeco.github.io/SendspinZero/SendspinZero-Speaker/"><img src="https://img.shields.io/badge/FLASH-FIRMWARE-ff6b00?style=for-the-badge&labelColor=111827" alt="Open Installer"></a></td>
@@ -63,8 +68,6 @@ That gives a total of **9 variants**:
 </table>
 
 <br>
-
-The following devices require manual compiling to change the device control functions.
 
 <table>
   <tr>
