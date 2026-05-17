@@ -1,5 +1,5 @@
 substitutions:
-  name: sendspinzero-control
+  name: zero-control
   friendly_name: Sendspin Zero Control
 
 ## SETTINGS ######################################################################################################################################
