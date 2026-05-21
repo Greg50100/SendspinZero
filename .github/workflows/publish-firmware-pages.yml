@@ -49,7 +49,6 @@ jobs:
 
           echo "Pages base URL: $PAGES_BASE_URL"
           echo "Firmware version: $FW_VERSION"
-          echo "Created stub secrets.yaml"
 
           configs=(Sendspin*.yaml)
           if [ ${#configs[@]} -eq 0 ]; then
@@ -70,7 +69,7 @@ jobs:
             echo "Output: site/$name"
             echo "Publish URL: ${PAGES_BASE_URL%/}/$name"
 
-            if uvx ewt-gen==1.4.2 --pre-release "$config" \
+            if uvx ewt-gen==1.4.2 "$config" \
               -t "$name" \
               -o "site/$name" \
               --publish-url "${PAGES_BASE_URL%/}/$name" \
