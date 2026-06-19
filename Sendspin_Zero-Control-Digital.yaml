@@ -7,6 +7,9 @@ substitutions:
   ## Startup sound, options are: Home_Connected or Home_Connected_Male
   startup_sound_file: popup # Home_Connected, popup, available, Server_Connected
 
+  # Image model options are: AlbertQuackmore, Alita, Casita, Gwen, HA-character, ha-girl, Hacker, Salem, Sarah, Shaun
+  imagemodel: "HA-character"
+
   ## Sample rate for DAC
   media_sample_rate: 44100
 
@@ -170,7 +173,7 @@ globals:
     initial_value: "false"
 
 image:
-  - file: https://raw.githubusercontent.com/RealDeco/xiaozhi-esphome/main/images/Gwen/240x240/playing.png
+  - file: https://raw.githubusercontent.com/RealDeco/xiaozhi-esphome/main/images/${imagemodel}/360x360/playing.png
     id: fallback_playing_image
     resize: 216x216
     type: RGB565
