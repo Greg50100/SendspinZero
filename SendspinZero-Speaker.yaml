@@ -65,7 +65,56 @@ i2s_audio:
   - id: i2s_audio_bus
     i2s_lrclk_pin: GPIO4
     i2s_bclk_pin: GPIO3
+  - id: i2s_input_mic
+    i2s_lrclk_pin: GPIO11
+    i2s_bclk_pin: GPIO09
+    
+microphone:
+  - platform: i2s_audio
+    id: i2s_mics
+    adc_type: external
+    i2s_din_pin: GPIO07
+    channel: left
+    i2s_audio_id: i2s_input_mic
 
+micro_wake_word:
+  models:
+    - model: okay_nabu
+
+voice_assistant:
+  id: va
+  microphone: i2s_mics
+  speaker: my_speaker
+  use_wake_word: true
+  on_listening:
+    - light.turn_on:
+        id: status_led
+        blue: 100%
+        red: 0%
+        green: 0%
+        brightness: 60%
+        effect: "Pulse Rapide"
+  on_tts_start:
+    - light.turn_on:
+        id: status_led
+        blue: 0%
+        red: 0%
+        green: 100%
+        brightness: 60%
+        effect: "Pulse Lent"
+  on_end:
+    - light.turn_off: status_led
+  on_error:
+    - light.turn_on:
+        id: status_led
+        red: 100%
+        blue: 0%
+        green: 0%
+        brightness: 60%
+        effect: "None"
+    - delay: 2s
+    - light.turn_off: status_led
+    
 speaker:
   - platform: i2s_audio
     id: box_speaker
