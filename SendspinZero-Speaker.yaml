@@ -34,6 +34,13 @@ logger:
   level: debug
 
 api:
+  services:
+    - service: start_voice_assistant
+      then:
+        - voice_assistant.start:
+    - service: stop_voice_assistant
+      then:
+        - voice_assistant.stop:
   on_client_connected:
     - lambda: |-
         if (!id(boot_sound_played)) {
