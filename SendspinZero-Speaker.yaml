@@ -31,7 +31,7 @@ esp32:
     type: esp-idf
 
 logger:
-  level: warn
+  level: debug
 
 api:
   on_client_connected:
