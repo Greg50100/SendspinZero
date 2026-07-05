@@ -84,7 +84,7 @@ micro_wake_word:
 voice_assistant:
   id: va
   microphone: i2s_mics
-  speaker: my_speaker
+  speaker: box_speaker
   use_wake_word: true
   on_listening:
     - light.turn_on:
